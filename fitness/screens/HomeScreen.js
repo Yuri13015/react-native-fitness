@@ -4,7 +4,7 @@ import FitnessCards from '../components/FitnessCard'
 
 const HomeScreen = () => {
     return (
-            <SafeAreaView style={{ width:'100%'}}>
+            <SafeAreaView style={{marginTop:30, width:'100%'}}>
             <View style={{ backgroundColor: '#A7D2CB', padding: 10, height: 112, width: "100%" }}>
                 <Text style={{ color: 'white', fontWeight: "bold", fontSize: 20 }}>Fitness App</Text>
                 <View
