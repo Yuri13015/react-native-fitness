@@ -150,12 +150,6 @@ export default [
           sets:10,
         },
         {
-          id:"22",
-          image:"https://thumbs.gfycat.com/TheseRigidBorer-size_restricted.gif",
-          name:"SHOULDER STRETCH",
-          sets:5,
-        },
-        {
           id:"23",
           image:"https://thumbs.gfycat.com/AlertAfraidAldabratortoise-max-1mb.gif",
           name:"COBRA STRETCH",
