@@ -1,10 +1,11 @@
-import { StyleSheet, Text, SafeAreaView, View, Image } from 'react-native'
+import { StyleSheet, Text, ScrollView, View, Image,SafeAreaView } from 'react-native'
 import React from 'react'
 import FitnessCards from '../components/FitnessCard'
 
 const HomeScreen = () => {
     return (
         <SafeAreaView>
+            <ScrollView>
             <View style={{ backgroundColor: '#A7D2CB', padding: 10, height: 200, width: "100%" }}>
                 <Text style={{ color: 'white', fontWeight: "bold", fontSize: 18 }}>Fitness App</Text>
                 <View
@@ -82,6 +83,7 @@ const HomeScreen = () => {
                     </View>
                         <FitnessCards></FitnessCards>
             </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }

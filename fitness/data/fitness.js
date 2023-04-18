@@ -49,7 +49,7 @@ export default [
       id: "1",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRonpSjpGQ2-JD8-XFFD7LYsVSFCOiASj0wSOq1qxNvxGFHe7W6AU1LRAeJ2fOIzYICMGc&usqp=CAU",
-      name: "ABS BEGINNER",
+      name: "ABDOS",
       description: "7x4 CHALLENGE",
       excersises : [
         {
@@ -88,7 +88,7 @@ export default [
       id: "2",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1NHvoutGn-Vr_uwVbOOtezhENvx9jhV6pfQ&usqp=CAU",
-      name: "ARM BEGINNER",
+      name: "BRAS",
       description: "7x4 CHALLENGE",
       excersises:[
         {
@@ -140,7 +140,7 @@ export default [
       id: "3",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCT0tewpNAZ6R9JUoMDHIHGnpE44U2Fl1Zw&usqp=CAU",
-      name: "CHEST BEGINNER",
+      name: "PECS",
       description: "7x4 CHALLENGE",
       excersises: [
         {
