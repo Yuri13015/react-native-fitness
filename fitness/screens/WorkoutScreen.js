@@ -69,7 +69,7 @@ const WorkoutScreen = () => {
                     excersises:route.params.excersises,
                 })}
                 style={{
-                    backgroundColor: 'blue',
+                    backgroundColor: 'white',
                     padding: 10,
                     marginLeft: 'auto',
                     marginRight: 'auto',
