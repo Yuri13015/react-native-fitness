@@ -46,7 +46,11 @@ const FitScreen = () => {
                 x{current.sets}
             </Text>
             <Pressable
-            onPress={()=>navigation.navigate('Rest')}
+            onPress={()=>{navigation.navigate('Rest')
+            setTimeout(() => {
+                    setIndex(index + 1)
+            },2000)
+            }}
           style={{
             backgroundColor: "white",
             marginLeft: "auto",
