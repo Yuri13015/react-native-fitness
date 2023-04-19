@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView, Image,Pressable } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, Pressable } from 'react-native'
 import React from 'react'
 import { useRoute } from '@react-navigation/native'
 import { useState } from 'react'
@@ -45,35 +45,116 @@ const FitScreen = () => {
             >
                 x{current.sets}
             </Text>
+            {/* retour au menu apres que tout les exo soit fait  */}
+            {index + 1 >= excersise.length ? (
+
+                <Pressable
+                    onPress={() => {
+                        navigation.navigate('Home');
+                    }}
+                    style={{
+                        backgroundColor: "white",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        marginTop: 30,
+                        borderRadius: 20,
+                        padding: 10,
+                        width: 150,
+                    }}
+                >
+                    <Text
+                        style={{
+                            textAlign: "center",
+                            fontWeight: "bold",
+                            fontSize: 20,
+                            color: "#292929",
+                        }}
+                    >
+                        SUIVANT
+                    </Text>
+
+                </Pressable>
+            ) : (
+                <Pressable
+                    onPress={() => {
+                        navigation.navigate('Rest')
+                        setTimeout(() => {
+                            setIndex(index + 1)
+                        }, 2000)
+                    }}
+                    style={{
+                        backgroundColor: "white",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        marginTop: 30,
+                        borderRadius: 20,
+                        padding: 10,
+                        width: 150,
+                    }}
+                >
+                    <Text
+                        style={{
+                            textAlign: "center",
+                            fontWeight: "bold",
+                            fontSize: 20,
+                            color: "#292929",
+                        }}
+                    >
+                        SUIVANT
+                    </Text>
+
+                </Pressable>
+            )
+            }
+
             <Pressable
-            onPress={()=>{navigation.navigate('Rest')
-            setTimeout(() => {
-                    setIndex(index + 1)
-            },2000)
-            }}
-          style={{
-            backgroundColor: "white",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: 30,
-            borderRadius: 20,
-            padding: 10,
-            width: 150,
-          }}
-        >
-             <Text
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              fontSize: 20,
-              color: "#292929",
-            }}
-          >
-            SUIVANT
-          </Text>
-        
-        </Pressable>
-        </SafeAreaView>
+                style={{ flexDirection: 'row', alignItems: 'center', fontWeight: 'bold', marginLeft: 'auto', marginRight: 'auto', marginTop: 30 }}>
+
+                <Pressable
+                    disabled={index === 0}
+                    onPress={() => {
+                        navigation.navigate('Rest');
+
+                        setTimeout(() => {
+                            setIndex(index - 1)
+                        }, 2000)
+                    }}
+                    style={{ backgroundColor: '#A7D2CB', padding: 10, borderRadius: 15, marginHorizontal: 20, width: 120, alignItems: 'center' }}>
+                    <Text style={{ fontWeight: 'bold' }}>PRECEDENT</Text>
+                </Pressable>
+
+                {/*implémentation du bouton passer */}
+
+                {index + 1 >= excersise.length ? (
+
+
+                    <Pressable
+                        onPress={() => {
+                            navigation.navigate('Home');
+                        }}
+                        style={{ backgroundColor: '#A7D2CB', padding: 10, borderRadius: 15, marginHorizontal: 20, width: 120, alignItems: 'center' }}>
+                        <Text style={{ fontWeight: 'bold' }}>PASSER</Text>
+                    </Pressable>
+
+
+                ) : (
+                    <Pressable
+                        onPress={() => {
+                            navigation.navigate('Rest');
+
+                            setTimeout(() => {
+                                setIndex(index + 1);
+                            }, 2000)
+                        }}
+                        style={{ backgroundColor: '#A7D2CB', padding: 10, borderRadius: 15, marginHorizontal: 20, width: 120, alignItems: 'center' }}>
+                        <Text style={{ fontWeight: 'bold' }}>PASSER</Text>
+                    </Pressable>
+
+                )}
+
+
+            </Pressable>
+        </SafeAreaView >
     )
 }
 
