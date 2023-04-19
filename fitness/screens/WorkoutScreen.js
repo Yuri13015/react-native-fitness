@@ -3,11 +3,17 @@ import React from "react";
 import { useRoute } from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
+import { FitnessItems } from "../Context";
+import { useContext } from "react";
+import { AntDesign } from '@expo/vector-icons';
 
 const WorkoutScreen = () => {
     const route = useRoute();
    // console.log(route.params);
     const navigation = useNavigation();
+    const {
+        completed,setCompleted,
+    } = useContext(FitnessItems);
     return (
         <>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -47,7 +53,8 @@ const WorkoutScreen = () => {
                             <Text
                                 style={{
                                     fontSize: 17,
-                                    fontWeight: 'bold'
+                                    fontWeight: 'bold',
+                                    width:190,
                                 }} >
                                 {item.name}
                             </Text>
@@ -60,14 +67,23 @@ const WorkoutScreen = () => {
                                 x{item.sets}
                             </Text>
                         </View>
+
+                        {completed.includes(item.name) ? (
+                            <AntDesign name="checkcircle" size={34} color="green" />
+                        ):(
+                            null
+                        )}
                     </Pressable>
                 ))}
             </ScrollView>
 
             <Pressable
-                onPress={()=>navigation.navigate('Fit',{
+                onPress={()=>{
+                    navigation.navigate('Fit',{
                     excersises:route.params.excersises,
-                })}
+                })
+                    setCompleted([]);
+                }}
                 style={{
                     backgroundColor: 'white',
                     padding: 10,
