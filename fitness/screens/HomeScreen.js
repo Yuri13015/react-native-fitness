@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { FitnessItems } from '../Context';
 
 const HomeScreen = () => {
-    const { minutes, calories, workout, } = useContext(FitnessItems)
+    const { minutes, calories, workout, } = useContext(FitnessItems) // Utilisation du hook useContext pour accéder aux valeurs du contexte FitnessItems
     return (
             <SafeAreaView style={{marginTop:30, width:'100%'}}>
             <View style={{ backgroundColor: '#A7D2CB', padding: 10, height: 112, width: "100%" }}>

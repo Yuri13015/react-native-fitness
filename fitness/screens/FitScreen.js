@@ -84,8 +84,8 @@ const FitScreen = () => {
                         navigation.navigate('Rest');
                         setCompleted([...completed, current.name])
                         setWorkout(workout + 1)
-                        setMinutes(minutes + 2.5)
-                        setCalories(calories + 6.30)
+                        setMinutes(minutes + 1)
+                        setCalories(calories + 7)
                         setTimeout(() => {
                             setIndex(index + 1)
                         }, 2000)

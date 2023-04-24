@@ -64,7 +64,7 @@ const WorkoutScreen = () => {
                                     fontSize: 16,
                                     color: 'gray'
                                 }}>
-                                x{item.sets}
+                                {item.sets} min
                             </Text>
                         </View>
 
